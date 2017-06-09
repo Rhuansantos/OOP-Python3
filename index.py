@@ -30,7 +30,6 @@ class Pet(Shelter):
                     return True
 
     def printPetProfile(self):
-
         print('from print profile')
 
 class Menu():
@@ -44,34 +43,23 @@ class Menu():
         self.exec()
 
     def exec(self):
-        menuoption = input()
-        if menuoption == "1":
+        menu_option = input()
+        if menu_option == "1":
             print('show pets')
-        elif menuoption == "2":
-            print('option 2')
+        elif menu_option == "2":
+            # name = input("Type the name of the pet" "\n")
+            # age = input("Type the age" "\n")
+            # pet_type = input("Type the type" "\n")
+            # newPet = Pet(name, age, pet_type)
+            newPet = Pet('rhuan', '10', 'fsafas')
         else:
             while menuoption not in ["1", "2"]:
                 print('this is not a valid option')
                 menuoption = input()
         return True
 
-
+# ============ Initial Function ============
 def main():
     menu = Menu()
 
-if __name__ == "__main__": main()
-
-
-
-
-# Create a new pet
-# name = input("Type the name of the pet")
-# age = input("Type the age")
-# petType = input("Type the type")
-# newPet = Pet(name, age, petType)
-
-
-# newPet = Pet('rhuan', '10', 'cat')
-
-#
-# print(newPet.validation())
+if __name__ == "__main__": main()# == auto exec
