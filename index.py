@@ -22,7 +22,7 @@ class Pet(Shelter):
         if _type == "dog" or _type == "cat":
             print('everything looks fine')
         else:
-            while _type is not "dog" or _type is not "cat":
+            while _type not in ["cat", "dog"]:
                 print('======= Oops, type dog or cat =======')
                 _type = input()
                 if _type == "dog" or _type == "cat":
