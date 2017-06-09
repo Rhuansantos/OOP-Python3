@@ -1,3 +1,9 @@
+class utilities:
+    def __init__(self):
+
+        def avg(self):
+            return 'this is your avg'
+
 class Shelter:
     def __init__(self):
         self.shelterId = '0'
@@ -24,7 +30,36 @@ class Pet(Shelter):
                     return True
 
     def printPetProfile(self):
-        print()
+
+        print('from print profile')
+
+class Menu():
+    def __init__(self):
+        self.show()
+
+    def show(self):
+        print('============ Welcome to the Shelter Dashboard ============' "\n"
+              '1) Show pets' "\n"
+              '2) Create a new pet' "\n")
+        self.exec()
+
+    def exec(self):
+        menuoption = input()
+        if menuoption == "1":
+            print('show pets')
+        elif menuoption == "2":
+            print('option 2')
+        else:
+            while menuoption not in ["1", "2"]:
+                print('this is not a valid option')
+                menuoption = input()
+        return True
+
+
+def main():
+    menu = Menu()
+
+if __name__ == "__main__": main()
 
 
 
@@ -36,7 +71,7 @@ class Pet(Shelter):
 # newPet = Pet(name, age, petType)
 
 
-newPet = Pet('rhuan', '10', 'fas')
+# newPet = Pet('rhuan', '10', 'cat')
 
 #
 # print(newPet.validation())
