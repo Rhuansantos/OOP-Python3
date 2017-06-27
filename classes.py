@@ -57,6 +57,10 @@ class Menu():
             age = input("Type the age" "\n")
             pet_type = input("Type the type" "\n")
             newPet = Pet(name, age, pet_type)
+            petArray.append(newPet)
+
+            for i in petArray:
+                print(i.name)
         else:
             while menu_option not in ["1", "2"]:
                 print('this is not a valid option, please choose 1 or 2')
